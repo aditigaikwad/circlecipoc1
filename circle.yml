@@ -2,7 +2,9 @@
 deployment:
   staging:
     branch: master
-    commands: hugo
+    commands: 
+    - hugo
+
 test:
   override:
     - "true"
