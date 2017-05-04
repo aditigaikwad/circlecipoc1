@@ -8,7 +8,7 @@ deployment:
     commands:
       - hugo version
       - hugo
-      - aws s3 sync /home/user/public/index.html s3://buckets/alm-bucket-circlecipoc/
+      - aws s3 sync /root/circlecipoc1/public/index.html s3://buckets/alm-bucket-circlecipoc/
 test:
   override:
     - "true"
