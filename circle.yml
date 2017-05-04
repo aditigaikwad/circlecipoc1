@@ -1,9 +1,6 @@
 machine:
 
-general:
-  branches:
-    only:
-      - master # only build/deploy from master
+
   
 deployment:
   staging:
