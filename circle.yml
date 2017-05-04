@@ -3,6 +3,9 @@ deployment:
   staging:
     branch: master
     post:   hugo
+test:
+  override:
+    - "true"
                                                                                                                                     
        
 
