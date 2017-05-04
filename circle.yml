@@ -1,4 +1,8 @@
+## Customize the test machine
+machine:
+## Customize deployment commands
 deployment:
   staging:
     branch: master
-    post:   hugo
+    post: hugo
+
