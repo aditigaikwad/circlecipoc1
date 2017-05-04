@@ -1,8 +1,9 @@
-machine:
+
 deployment:
   staging:
     branch: master
-  post:
-    - hugo
+    post:   hugo
+~                                                                                                                                    
+~       
 
 
