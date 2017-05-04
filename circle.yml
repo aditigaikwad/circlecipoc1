@@ -8,6 +8,7 @@ deployment:
     commands:
       - hugo version
       - hugo
+      - aws s3 sync /home/user/public https://console.aws.amazon.com/s3/buckets/alm-bucket-circlecipoc/?region=us-east-2&tab=overview --delete
 test:
   override:
     - "true"
