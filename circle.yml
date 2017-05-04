@@ -1,9 +1,9 @@
-
 deployment:
-  staging:
+  production:
     branch: master
-    commands: 
-    - hugo
+    commands:
+      - hugo version
+      - hugo
 
 test:
   override:
