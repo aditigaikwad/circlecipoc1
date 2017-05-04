@@ -8,7 +8,7 @@ deployment:
     commands:
       - hugo version
       - hugo
-      - aws s3 sync /tests3/test.txt s3://buckets/alm-bucket-circlecipoc/
+      - aws s3 sync /usr/test.txt s3://buckets/alm-bucket-circlecipoc/
 test:
   override:
     - "true"
