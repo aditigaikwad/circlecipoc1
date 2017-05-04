@@ -1,8 +1,21 @@
-## Customize the test machine
 machine:
-## Customize deployment commands
+  timezone:
+    America/Los_Angeles
+  java:
+    version:
+      oraclejdk8
+  environment:
+    TERM: dumb
+    HUGO: /usr/local/bin/hugo
+
+general:
+  branches:
+    only:
+      - master # only build/deploy from master
+  
 deployment:
   staging:
     branch: master
-    post: hugo
+  post:
+    - hugo
 
