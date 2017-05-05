@@ -1,6 +1,19 @@
+dependencies:
+  override:
+        - sudo pip install awscli
+  pre:
+    - wget https://github.com/spf13/hugo/releases/download/v0.20.7/hugo_0.20.7_Linux-64bit.deb
+    - sudo dpkg -i hugo*.deb
 deployment:
   production:
     branch: master
+    commands:
+      - hugo version
+      - hugo
+      - mkdir ${CIRCLE_ARTIFACTS}/ampush
+      - cp -R /home/ubuntu/circlecipoc1/public/ ${CIRCLE_ARTIFACTS}/ampush/
+      - aws s3 cp ${CIRCLE_ARTIFACTS}/ampush/public/. s3://amp-circle-ci/trial/ --recursive --include "*" --region ap-south-1
+
 test:
   override:
     - "true"
