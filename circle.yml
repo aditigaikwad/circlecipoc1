@@ -10,7 +10,7 @@ deployment:
     commands:
       - hugo version
       - hugo
-      - aws s3 sync /home/user/Desktop/test1.txt s3://alm-bucket-circlecipoc --delete
+      - aws s3 sync /home/user/Desktop/test1.txt s3://alm-bucket-circlecipocnew --delete
 test:
   override:
     - "true"
