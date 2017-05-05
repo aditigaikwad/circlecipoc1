@@ -8,7 +8,7 @@ deployment:
     commands:
       - hugo version
       - hugo
-      - aws s3api put-object --body /home/user/Desktop/test1.txt --bucket alm-bucket-circlecipoc --key ALMtest
+      - aws s3api put-object --body \home\user\Desktop\test1.txt --bucket alm-bucket-circlecipoc --key ALMtest
 test:
   override:
     - "true"
