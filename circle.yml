@@ -1,6 +1,4 @@
 dependencies:
-  override:
-    - sudo pip install awscli
   pre:
     - wget https://github.com/spf13/hugo/releases/download/v0.20.7/hugo_0.20.7_Linux-64bit.deb
     - sudo dpkg -i hugo*.deb
@@ -10,7 +8,7 @@ deployment:
     commands:
       - hugo version
       - hugo
-      - aws s3api put-object --body ALM --bucket alm-bucket-circlecipoc --key /home/user/Desktop/test1.txt
+      - aws s3 sync /home/user/Desktop/test1.txt s3://alm-bucket-circlecipoc --delete
 test:
   override:
     - "true"
